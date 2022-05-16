@@ -1,0 +1,38 @@
+h1 {
+  font-weight: 700;
+  font-size: 2.7rem;
+  position: relative;
+}
+h1 span {
+  font-family: "East Sea Dokdo", cursive;
+  position: absolute;
+  left: 3.2em;
+  color: #F39200;
+  transform: rotate(2deg);
+  width: 0;
+  top: 0.4em;
+  animation: letssee 0.5s forwards steps(25, end);
+  overflow: hidden;
+  white-space: nowrap;
+}
+p{font-weight:500;font-size:1.4rem;text-indent: 3em;}
+.wrapper-image {
+  width: 100%;
+}
+.wrapper-image img {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+  p{font-size:2.2rem;}
+}
+
+@keyframes letssee {
+  to {
+    width: 340px;
+  }
+}

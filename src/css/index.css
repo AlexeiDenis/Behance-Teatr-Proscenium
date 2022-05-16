@@ -1,0 +1,30 @@
+.flexing {
+  display: flex;
+  padding-block-end: 2em;
+  flex-direction: column;
+}
+h1 {
+  font-weight: 700;
+  font-size: clamp(2.2rem, calc(1rem + 2.5vw), 6rem);
+}
+p {
+  font-weight: 400;
+  align-self: flex-end;
+  font-size: 1.2rem;
+  max-width: 28ch;
+}
+
+.wrapper-image {
+  width: 100%;
+}
+.wrapper-image img {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+}
+
+@media (min-width:1440px){
+  .flexing{
+    flex-direction: row;
+  }
+}

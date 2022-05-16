@@ -1,0 +1,121 @@
+h1 {
+  font-weight: 700;
+  font-size: 2.7rem;
+  position: relative;
+}
+article {
+  margin-block: 2em;
+}
+h1 span {
+  font-family: "East Sea Dokdo", cursive;
+  position: absolute;
+  left: 3.2em;
+  color: #c527ff;
+  transform: rotate(2deg);
+  font-weight:700;
+  width: 0;
+  top: 0.4em;
+  animation: letssee 0.5s forwards steps(25, end);
+  overflow: hidden;
+  white-space: nowrap;
+}
+summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding-block-end: 1em;
+  flex-direction: column;
+  cursor: pointer;
+}
+summary:hover{background-color: rgb(243, 243, 243);}
+.description {
+  order: 3;
+}
+summary time {
+  order: 2;
+  font-weight:500;
+}
+summary .secondHeading {
+  order: 1;
+  font-weight: bold;
+  font-size: 120%;
+  max-width:27ch;
+}
+
+details {
+  border-top: 1px solid black;
+  padding:1em;
+}
+
+.wrapper-image {
+  width: 100%;
+  max-width: 650px;
+}
+.wrapper-image img {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+}
+.cast {
+  display: flex;
+  justify-content: space-between;
+}
+.cast .item h3,
+.cast .item p {
+  margin-block: 0.4em;
+}
+
+@media (min-width: 488px) {
+  
+
+  summary {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) {
+  .description {
+    max-width: 27ch;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+  summary time {
+    order: 1;
+  }
+  summary{align-items: center;}
+  summary .secondHeading {
+    order: 2;
+    font-weight: bold;
+    font-size: 120%;
+  }
+  .container-details {
+    display: flex;
+    gap: 0.6em;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .cast {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (min-width:1440px){
+  .description {
+   
+    font-size:2.2rem;
+  }
+  summary .secondHeading{
+    font-size:2.3rem;
+  }
+  
+  
+}
+
+@keyframes letssee {
+  to {
+    width: 340px;
+  }
+}

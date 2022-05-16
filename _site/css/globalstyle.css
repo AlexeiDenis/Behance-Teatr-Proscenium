@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  position: relative;
+}
+h1 {
+  z-index: -1;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: white;
+  padding-block: 0.6em;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(220.55deg, #565656 0%, #181818 100%);
+  gap: 2em;
+  top: -20px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(-200%);
+  transition: transform 0.26s ease-out;
+}
+.opened {
+  transform: translateX(0);
+}
+nav ul li {
+  list-style-type: none;
+}
+nav ul li:hover a {
+  background-color: rgb(201, 63, 21);
+}
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.6rem;
+}
+nav > .logo {
+  font-weight: 700;
+}
+nav button {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+}
+nav button,
+nav {
+  z-index: 999;
+}
+nav button svg,
+nav ul li a {
+  transition: color 0.25s ease-out;
+}
+nav ul li a {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+nav button svg {
+  color: black;
+}
+nav button:hover svg {
+  color: rgb(201, 63, 21);
+}
+main {
+  margin-block-start: 4em;
+  width: 97%;
+  margin-inline: auto;
+}
+
+.dimension {
+  width: 97%;
+  margin-inline: auto;
+}
+/* .open{background-color: rgb(235, 151, 151);} */
+
+@media (min-width: 768px){
+  nav button{display:none;}
+  nav ul {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    background: inherit;
+    gap: 2em;
+    width: auto;
+    height:auto;
+    transform: none;
+    transition: none;
+  }
+  nav ul li a{color:black;font-size:1rem;}
+  nav ul li:hover a{
+    color:white;
+    background-color: black;
+  }
+}

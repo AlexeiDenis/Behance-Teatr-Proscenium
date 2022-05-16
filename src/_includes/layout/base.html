@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include "basehead.html" %}
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  <header>
+    <nav class="dimension">
+      <a class="logo" href="/" title="to homepage">Teatr Proscenium<sup>&#8482;</sup></a>
+      <ul id="menu">
+        <li><a href="/repertoir" >Repertoir</a></li>
+        <li><a href="/aboutus" class="">About Us</a></li>
+        <li><a href="/tickets">Tickets</a></li>
+        <li><a href="/">Contact Us</a></li>
+      </ul>
+      
+      <button id="btn" aria-label="open navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-menu">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+  </header>
+  <main>
+    {{content | safe}}
+  </main>
+ <!-- capture the JS content as a Nunjucks variable -->
+{% set js %}
+{% include "sample.js" %}
+{% endset %}
+<!-- feed it through our jsmin filter to minify -->
+<script>
+{{ js | jsmin | safe }}
+</script>
+</body>
+
+</html>
